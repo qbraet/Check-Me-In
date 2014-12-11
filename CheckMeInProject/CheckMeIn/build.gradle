@@ -1,0 +1,127 @@
+/*
+ * build.gradle is part of Check Me In
+ *
+ * Copyright (c) 2014 Quentin Braet
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Report bugs or new features to: quentinbraet@gmail.com
+ */
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'http://download.crashlytics.com/maven' }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
+
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    //maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url 'http://download.crashlytics.com/maven' }
+
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'crashlytics'
+apply plugin: 'android-apt'
+
+def androidAnnotationsVersion = '3.2';
+
+dependencies {
+
+    apt "org.androidannotations:androidannotations:${androidAnnotationsVersion}"
+    compile "org.androidannotations:androidannotations-api:${androidAnnotationsVersion}"
+
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile('com.google.code.gson:gson:2.+')
+    compile('com.google.android.gms:play-services:6.5.+')
+    compile('com.readystatesoftware.systembartint:systembartint:+')
+    compile('de.keyboardsurfer.android.widget:crouton:1.8.4@aar') {
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+    compile 'com.sothree.slidinguppanel:library:1.0.1'
+
+    compile fileTree(dir: 'libs', include: '*.jar')
+
+    compile project(':FoursquareOAuth')
+
+    compile 'se.emilsjolander:stickylistheaders:2.1.4'
+    compile 'com.crashlytics.android:crashlytics:1.+'
+
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        // if you have multiple outputs (when using splits), you may want to have other index than 0
+
+        //resourcePackageName 'com.myproject.package'
+
+        // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
+        resourcePackageName android.defaultConfig.applicationId
+
+        // You can set optional annotation processing options here, like these commented options:
+        // logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+    }
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+        applicationId "be.quentinbraet.checkmein"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("<name>.keystore")
+            storePassword "<pass>"
+            keyAlias "alias"
+            keyPassword "<pass>"
+        }
+    }
+
+    buildTypes {
+        debug {
+            versionNameSuffix '-debug'
+            applicationIdSuffix '.debug'
+            buildConfigField "String", "CLIENT_ID", client_id
+            buildConfigField "String", "CLIENT_SECRET", client_secret
+            buildConfigField "String", "CLIENT_CALLBACK", client_callback
+        }
+        release {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            buildConfigField "String", "CLIENT_ID", client_id
+            buildConfigField "String", "CLIENT_SECRET", client_secret
+            buildConfigField "String", "CLIENT_CALLBACK", client_callback
+        }
+    }
+}

@@ -1,0 +1,233 @@
+<!--
+  ~ styles.xml is part of Check Me In
+  ~
+  ~ Copyright (c) 2014 Quentin Braet
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~ Report bugs or new features to: quentinbraet@gmail.com
+  -->
+
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="header_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/card_header_button_text</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:text">@string/see_more</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:background">@color/header_button_default</item>
+        <item name="android:layout_marginLeft">@dimen/card_header_button_margin_left</item>
+        <item name="android:paddingLeft">@dimen/card_header_button_padding_side</item>
+        <item name="android:paddingRight">@dimen/card_header_button_padding_side</item>
+        <item name="android:paddingTop">@dimen/card_header_button_padding_top</item>
+        <item name="android:paddingBottom">@dimen/card_header_button_padding_top</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginTop">@dimen/card_header_padding_top</item>
+    </style>
+
+    <style name="card_popup_anchor">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/card_menu_button</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="card_shadow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/card_shadow</item>
+        <item name="android:src">@drawable/card_shadow</item>
+        <!--<item name="android:layout_below">@+id/inner_frame</item>-->
+    </style>
+
+    <style name="card_outer">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">@dimen/card_outer_padding_top</item>
+        <item name="android:paddingBottom">@dimen/card_outer_padding_bottom</item>
+        <item name="android:paddingLeft">@dimen/card_outer_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/card_outer_padding_horizontal</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+    </style>
+
+    <style name="card_inner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/card_inner_padding_left</item>
+        <item name="android:paddingRight">@dimen/card_inner_padding_right</item>
+        <item name="android:paddingTop">@dimen/card_inner_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/card_inner_padding_vertical</item>
+        <item name="android:background">@drawable/card_selector</item>
+        <item name="android:duplicateParentState">true</item>
+    </style>
+
+    <style name="card_thumbnail">
+        <item name="android:layout_width">@dimen/card_thumbnail</item>
+        <item name="android:layout_height">@dimen/card_thumbnail</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_marginRight">@dimen/card_thumbnail_margin</item>
+    </style>
+
+    <style name="card_title_frame">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginLeft">@dimen/card_title_margin_left</item>
+        <item name="android:layout_toRightOf">@android:id/icon</item>
+    </style>
+
+    <style name="card_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/card_title</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_toLeftOf">@android:id/button1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="card_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/card_content</item>
+        <!--<item name="android:layout_below">@+id/titleFrame</item>-->
+        <item name="android:layout_toRightOf">@android:id/icon</item>
+        <item name="android:layout_marginLeft">@dimen/card_title_margin_left</item>
+    </style>
+
+    <style name="card_header_outer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/card_header_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/card_header_padding_horizontal</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:background">@drawable/card_header_selector</item>
+    </style>
+
+    <style name="card_header_inner">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_toLeftOf">@android:id/button1</item>
+        <item name="android:layout_marginTop">@dimen/card_header_padding_top</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="card_header_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/card_header</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="card_header_summary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/card_subheader</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="Theme.Checkmein" parent="@style/AppBaseTheme">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_checkmein</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Checkmein</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Checkmein</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Checkmein</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Checkmein</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Checkmein</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_checkmein</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_checkmein</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Checkmein</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Checkmein.Widget</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Checkmein" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_checkmein</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_checkmein</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_checkmein</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Checkmein</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Checkmein" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_checkmein</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Checkmein</item>
+    </style>
+
+    <style name="PopupMenu.Checkmein" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_checkmein</item>
+    </style>
+
+    <style name="DropDownListView.Checkmein" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_checkmein</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Checkmein" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_checkmein</item>
+    </style>
+
+    <style name="DropDownNav.Checkmein" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_checkmein</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_checkmein</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_checkmein</item>
+    </style>
+
+    <style name="ProgressBar.Checkmein" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_checkmein</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Checkmein" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_checkmein</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Checkmein.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Checkmein</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Checkmein</item>
+    </style>
+
+</resources>

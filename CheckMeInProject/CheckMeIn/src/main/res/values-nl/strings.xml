@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ strings.xml is part of Check Me In
+  ~
+  ~ Copyright (c) 2014 Quentin Braet
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~ Report bugs or new features to: quentinbraet@gmail.com
+  -->
+
+<resources>
+
+    <string name="app_name">Check Me In</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="remove">Verwijder</string>
+    <string name="login_with_foursquare">Aanmelden met Foursquare</string>
+    <string name="app_not_installed_message">Om dit te doen, moet je de foursquare app installeren.</string>
+    <string name="connected_to_foursquare">Je bent nu verbonden met Foursquare!</string>
+    <string name="denied">Je hebt de toegang geweigerd</string>
+    <string name="canceled">De aanvraag werd onderbroken</string>
+    <string name="add_venue_to_monitor">Voeg plaats toe om te monitoren</string>
+    <string name="mayorships">Mayorships</string>
+    <string name="checkin_history">Checkin geschiedenis</string>
+    <string name="add">Toevoegen</string>
+    <string name="config">Aanpassen</string>
+    <string name="play_update">Update Play Services</string>
+    <string name="maps_update">Update Google Maps</string>
+    <string name="update_phone_blame">Je moet enkele apps updaten voor dit werkt</string>
+    <string name="checkin_range">Checkin radius</string>
+    <string name="config_checkin">Configureer automatische checkin</string>
+    <string name="save_monitor_info">Sla instellingen op</string>
+    <string name="info_saved_venue">Instellingen opgeslaan, je wordt nu automatisch ingecheckt</string>
+    <string name="info_removed_venue">Je zal hier niet langer ingecheckt worden</string>
+    <string name="could_not_add_geofences">Kon geen zone toevoegen</string>
+    <string name="could_not_remove_geofences">Kon zone niet verwijderen</string>
+    <string name="geofence_enter">Geofence ENTER</string>
+    <string name="geofence_exit">Geofence EXIT</string>
+    <string name="check_in">Check in</string>
+    <string name="checked_in_at">Ingecheckt in</string>
+    <string name="conflict_with">Conflict met andere zones (overlap niet toegestaan):</string>
+    <string name="see_more">Bekijk meer</string>
+    <string name="fuzzed_location">Dit is een privé locatie, plaats de marker op de juiste positie.</string>
+    <string name="home_placeholder_text">Tik op het + teken om plaatsen toe te voegen</string>
+    <string name="today">Vandaag</string>
+    <string name="yesterday">Gisteren</string>
+    <string name="days_ago">dagen geleden</string>
+    <string name="too_many_geofences">Opslaan mislukt: teveel zones!</string>
+    <string name="location_services_not_available">Gelieve de locatie services in te schakelen</string>
+    <string name="checkin_delay">Check-in na</string>
+    <string name="share">Delen</string>
+    <string name="settings">Instellingen</string>
+    <string name="cancel">Cancel</string>
+    <string name="connect">Verbind met</string>
+    <string name="connect_text">Dit netwerk is niet verbonden met je Foursquare account. We sturen je door naar de instellingen van de officiële app. Open \"Sharing with other networks\" en connecteer.</string>
+
+</resources>

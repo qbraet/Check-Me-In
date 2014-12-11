@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ colors.xml is part of Check Me In
+  ~
+  ~ Copyright (c) 2014 Quentin Braet
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~ Report bugs or new features to: quentinbraet@gmail.com
+  -->
+
+<resources>
+    <color name="logo_blue">#0072b1</color>
+    <color name="logo_yellow">#eeebac</color>
+    <color name="blue">#0cbadf</color>
+    <color name="blue_transparent_9">#990cbadf</color>
+    <color name="blue_transparent_3">#330cbadf</color>
+    <color name="green">#8fd400</color>
+    <color name="orange">#ff7900</color>
+    <color name="yellow">#ffcb00</color>
+    <color name="gray">#d1d4d3</color>
+    <color name="gray_transparent_9">#99d1d4d3</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="card_pressed">#ebebeb</color>
+    <color name="card_activated">#5F0099CC</color>
+    <color name="card_pressed_header">#d6d6d6</color>
+    <color name="header_button_default">#494949</color>
+    <color name="card_gray">#e5e5e5</color>
+
+    <color name="pressed_checkmein">#CC0099CC</color>
+</resources>

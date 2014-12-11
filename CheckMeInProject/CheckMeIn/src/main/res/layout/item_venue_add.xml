@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ item_venue_add.xml is part of Check Me In
+  ~
+  ~ Copyright (c) 2014 Quentin Braet
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  ~ Report bugs or new features to: quentinbraet@gmail.com
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/card_outer_padding_top"
+    android:paddingBottom="@dimen/card_outer_padding_bottom"
+    android:paddingLeft="@dimen/card_outer_padding_horizontal"
+    android:paddingRight="@dimen/card_outer_padding_horizontal"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_shadow"
+        android:src="@drawable/card_shadow" />
+
+    <RelativeLayout
+        android:id="@+id/inner_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/card_inner_padding_left"
+        android:paddingRight="@dimen/card_inner_padding_right"
+        android:paddingTop="@dimen/card_inner_padding_vertical"
+        android:paddingBottom="@dimen/card_inner_padding_vertical"
+        android:background="@drawable/card_selector"
+        android:duplicateParentState="true" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/add"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/add"
+                android:src="@drawable/ic_action_new"
+                android:textSize="@dimen/card_title"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/card_title"
+                android:layout_toLeftOf="@+id/add"
+                android:layout_alignParentLeft="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
